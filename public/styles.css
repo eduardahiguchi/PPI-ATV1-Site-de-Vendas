@@ -1,0 +1,141 @@
+/* Definição de fontes e configurações globais */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte bonita do Google Fonts */
+    margin: 0;
+    padding: 0;
+    background-color: #e9f2fc; /* Azul claro de fundo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1E3A8A; /* Azul escuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1E3A8A; /* Azul escuro */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Links */
+a {
+    color: #3B82F6; /* Azul claro para links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Formulários */
+input[type="text"], input[type="password"], input[type="number"] {
+    margin: 10px auto;
+    padding: 12px;
+    width: 250px;
+    border-radius: 8px;
+    border: 2px solid #3B82F6; /* Azul claro para bordas */
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+/* Botões */
+button {
+    padding: 12px 20px;
+    background-color: #1E40AF; /* Azul mais forte */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 250px; /* Mesmo tamanho dos campos de entrada */
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #2563EB; /* Azul mais claro quando o mouse passa */
+}
+
+/* Pacotes */
+.pacote {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pacote button {
+    padding: 10px;
+    background-color: #1E40AF; /* Azul forte */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.pacote button:hover {
+    background-color: #2563EB; /* Azul claro no hover */
+}
+
+/* Centralização de conteúdo */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+section {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2, h3 {
+    color: #1E3A8A; /* Azul escuro para títulos */
+}
+
+p {
+    color: #4B5563; /* Cinza para texto regular */
+    font-size: 16px;
+}
+
+label {
+    font-weight: bold;
+    color: #1E3A8A;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    input[type="text"], input[type="password"], input[type="number"] {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+}

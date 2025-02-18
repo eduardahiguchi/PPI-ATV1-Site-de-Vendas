@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Pacote para Japão</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Detalhes do Pacote para Japão</h1>
+    </header>
+
+    <main>
+        <p><strong>Descrição:</strong> Viagem para o Japão, explorando os principais pontos turísticos de Tóquio, Quioto e outros.</p>
+        <p><strong>Data de partida:</strong> 10/03/2025</p>
+        <p><strong>Preço:</strong> R$ 6.000,00 por pessoa</p>
+        <p><strong>Duração:</strong> 10 dias</p>
+        <p><strong>Lugares disponíveis:</strong> 10</p>
+
+        <label for="quantidade">Quantidade de lugares:</label>
+        <input type="number" id="quantidade" min="1" max="10" value="1">
+        <p><strong>Total: </strong>R$ <span id="total">6000.00</span></p>
+        <button onclick="reservar()">Reservar</button>
+
+        <p><a href="/private/painel.html">Voltar ao Painel</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agência de Viagens</p>
+    </footer>
+
+    <script>
+        document.getElementById('quantidade').addEventListener('input', function() {
+            const quantidade = parseInt(this.value);
+            const preco = 6000; 
+            const total = preco * quantidade;
+            document.getElementById('total').textContent = total.toFixed(2);
+        });
+
+        function reservar() {
+            alert('Reserva confirmada!');
+        }
+    </script>
+</body>
+</html>

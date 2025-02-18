@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Pacote - Suíça</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pacote para a Suíça</h1>
+        <nav>
+            <a href="../index.html">Voltar para a Página Inicial</a> |
+            <a href="../login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detalhes">
+            <h2>Descrição do Pacote</h2>
+            <p>Explore as paisagens deslumbrantes da Suíça! De Genebra a Zurique, você vai vivenciar a beleza dos Alpes suíços e a cultura europeia de tirar o fôlego.</p>
+
+            <h3>Detalhes do Pacote</h3>
+            <p><strong>Data de Partida:</strong> 25/08/2025</p>
+            <p><strong>Duração:</strong> 8 dias</p>
+            <p><strong>Preço por pessoa:</strong> R$ 9.000,00</p>
+            <p><strong>Local de Partida:</strong> Porto Alegre, Brasil</p>
+            <p><strong>Lugares Disponíveis:</strong> 20</p>
+
+            <h3>Escolha a Quantidade de Lugares</h3>
+            <label for="quantidade">Quantidade de Pessoas:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" max="20" value="1" onchange="atualizarValor()">
+            <p><strong>Valor Total: R$ <span id="valorTotal">9000.00</span></strong></p>
+
+            <button onclick="reservar()">Reservar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agência de Viagens</p>
+    </footer>
+
+    <script>
+        function atualizarValor() {
+            const quantidade = document.getElementById('quantidade').value;
+            const preco = 9000; 
+            const valorTotal = quantidade * preco;
+            document.getElementById('valorTotal').textContent = valorTotal.toFixed(2);
+        }
+
+        function reservar() {
+            alert('Reserva confirmada!');
+        }
+    </script>
+</body>
+</html>
